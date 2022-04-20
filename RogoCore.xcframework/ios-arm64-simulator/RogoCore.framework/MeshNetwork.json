@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "appKeys": [%@],
+  "groups": [],
+  "id": "http://www.bluetooth.com/specifications/assigned-numbers/mesh-profile/cdb-schema.json#",
+  "meshName": "MeshNetwork",
+  "meshUUID": "%@",
+  "netKeys": [
+    {
+      "index": 0,
+      "key": "%@",
+      "minSecurity": "secure",
+      "name": "Primary Network Key",
+      "phase": 0,
+      "timestamp": "2021-10-16T09:43:30Z"
+    }
+  ],
+  "networkExclusions": [],
+  "nodes": [
+    {
+      "appKeys": [],
+      "cid": "004C",
+      "configComplete": true,
+      "crpl": "7FFF",
+      "deviceKey": "EF7431E779392FBFA1F598F1D5415410",
+      "elements": [
+        {
+          "index": 0,
+          "location": "0001",
+          "models": [
+            {
+              "bind": [],
+              "modelId": "0000",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "0001",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "0002",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "0003",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1205",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1203",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1204",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1102",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1004",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1005",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1000",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1002",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1001",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1003",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "00590001",
+              "subscribe": []
+            }
+          ],
+          "name": "Primary Element"
+        },
+        {
+          "index": 1,
+          "location": "0002",
+          "models": [
+            {
+              "bind": [],
+              "modelId": "1000",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1002",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1001",
+              "subscribe": []
+            },
+            {
+              "bind": [],
+              "modelId": "1003",
+              "subscribe": []
+            }
+          ],
+          "name": "Secondary Element"
+        }
+      ],
+      "excluded": false,
+      "features": {
+        "friend": 2,
+        "lowPower": 2,
+        "proxy": 2,
+        "relay": 2
+      },
+      "name": "MobileApp",
+      "netKeys": [
+        {
+          "index": 0,
+          "updated": false
+        }
+      ],
+      "security": "secure",
+      "unicastAddress": "2710",
+      "UUID": "%@"
+    }
+  ],
+  "partial": false,
+  "provisioners": [
+    {
+      "allocatedGroupRange": [
+        {
+          "highAddress": "CC9A",
+          "lowAddress": "C000"
+        }
+      ],
+      "allocatedSceneRange": [
+        {
+          "firstScene": "0001",
+          "lastScene": "3333"
+        }
+      ],
+      "allocatedUnicastRange": [
+        {
+          "highAddress": "2710",
+          "lowAddress": "%@"
+        }
+      ],
+      "provisionerName": "MobileApp",
+      "UUID": "%@"
+    }
+  ],
+  "scenes": [],
+  "timestamp": "2021-10-16T09:43:30Z",
+  "version": "1.0.0"
+}
