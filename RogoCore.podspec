@@ -74,7 +74,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.source       = { :http => 'https://raw.githubusercontent.com/RogoSolutions/iOS_Rogo_Life_Library_Official/main/RogoCore.xcframework.zip' }
-  spec.ios.vendored_frameworks = 'RogoCore.framework'
+
+  spec.ios.vendored_frameworks = 'RogoCore.xcframework'
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -84,7 +85,6 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "RGCore"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -111,7 +111,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.framework  = "SomeFramework"
-  spec.frameworks = "nRFMeshProvision", "CocoaMQTT"
+  # spec.frameworks = "nRFMeshProvision", "CocoaMQTT"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
@@ -126,6 +126,6 @@ Pod::Spec.new do |spec|
   # spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
-
+  spec.dependency "CocoaMQTT", "~> 2.0.2"
+  spec.dependency "nRFMeshProvision", "~> 3.1.5"
 end
