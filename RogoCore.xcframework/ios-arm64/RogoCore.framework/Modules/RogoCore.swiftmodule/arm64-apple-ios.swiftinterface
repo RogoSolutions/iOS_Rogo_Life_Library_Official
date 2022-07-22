@@ -316,6 +316,17 @@ public enum RGBNetworkEnvironment {
     get
   }
 }
+@_hasMissingDesignatedInitializers public class RGBFptCameraServices : RogoCore.RGBiFptCameraServices {
+  public func config(clientId: Swift.String, clientSecret: Swift.String)
+  public func authenticateWith(code: Swift.String, completion: RogoCore.RGBCompletionObject<RogoCore.RGBAuthResponse>? = nil)
+  public func getListCamera(completion: RogoCore.RGBCompletionObject<[RogoCore.RGBFptCameraDetail]?>? = nil)
+  public func getCameraDetailWith(cameraSerial: Swift.String)
+  public func refreshToken(refreshToken: Swift.String? = nil, completion: RogoCore.RGBCompletionObject<RogoCore.RGBAuthResponse>? = nil)
+  public func getToken() -> Swift.String?
+  public func getRefreshToken() -> Swift.String?
+  public func addCameraWith(deviceInfo: RogoCore.RGBFptCameraDetail, didUpdateProgessing: ((_ completedPercent: Swift.Int) -> ())?, completion: RogoCore.RGBCompletionObject<Swift.Void?>?)
+  @objc deinit
+}
 public protocol RGBiDeviceServices {
   func reloadDeviceList(completion: RogoCore.RGBCompletionObject<Swift.Bool?>?)
   func generatePlayboxActiveCode(locationId: Swift.String, authApiKey: Swift.String, didGetCodeCompletion: RogoCore.RGBCompletionObject<RogoCore.RGBPlayBoxActiveCode?>?, didAddDeviceCompletion: RogoCore.RGBCompletionObject<Swift.Bool?>?)
@@ -491,6 +502,8 @@ public enum RGBCommandType : Swift.Int, Swift.Codable {
   public var pwd: Swift.String?
   public var url: Swift.String?
   public var usrId: Swift.String?
+  public var saToken: Swift.String?
+  public var srToken: Swift.String?
   @objc override dynamic public init()
   required public init(from decoder: Swift.Decoder) throws
   @objc deinit
@@ -608,6 +621,7 @@ public struct RGBScenarioTarget : Swift.Codable, Swift.Hashable {
   public var scenario: RogoCore.RGBiScenarioServices
   public var schedule: RogoCore.RGBiScheduleServices
   public var automation: RogoCore.RGBiAutomationServices
+  public var fptCameraHelper: RogoCore.RGBiFptCameraServices?
   public var accessToken: Swift.String?
   public func setCustomAuthenticate(authMethod: RogoCore.RGBAuthMethod, customAuth: RogoCore.RGBiAuth?, partnerId: Swift.String)
   public func setTargetEnviroment(environment: RogoCore.RGBNetworkEnvironment)
@@ -987,6 +1001,16 @@ extension RogoCore.RGBDeviceServices {
   public func stopScanZigbeeDevice(gateWay: RogoCore.RGBDevice)
   public func addZigbeeDevice(device: RogoCore.RGBMeshScannedDevice, toHub hub: RogoCore.RGBDevice, didUpdateProgessing: ((_ completedPercent: Swift.Int) -> ())?, completion: RogoCore.RGBCompletionObject<Swift.Void?>?)
 }
+public protocol RGBiFptCameraServices {
+  func config(clientId: Swift.String, clientSecret: Swift.String)
+  func authenticateWith(code: Swift.String, completion: RogoCore.RGBCompletionObject<RogoCore.RGBAuthResponse>?)
+  func getToken() -> Swift.String?
+  func getRefreshToken() -> Swift.String?
+  func refreshToken(refreshToken: Swift.String?, completion: RogoCore.RGBCompletionObject<RogoCore.RGBAuthResponse>?)
+  func getListCamera(completion: RogoCore.RGBCompletionObject<[RogoCore.RGBFptCameraDetail]?>?)
+  func getCameraDetailWith(cameraSerial: Swift.String)
+  func addCameraWith(deviceInfo: RogoCore.RGBFptCameraDetail, didUpdateProgessing: ((_ completedPercent: Swift.Int) -> ())?, completion: RogoCore.RGBCompletionObject<Swift.Void?>?)
+}
 @_hasMissingDesignatedInitializers public class RGBValueBrightnessKelvin : RogoCore.RGBCmdValue {
   public static let MAXB: Swift.Int
   public static let MINK: Swift.Float
@@ -1044,6 +1068,16 @@ public protocol RGBiScenarioServices {
   func updateScenario(scenario: RogoCore.RGBScenario, completion: RogoCore.RGBCompletionObject<RogoCore.RGBScenario?>?)
   func deleteScenarioWith(uuid: Swift.String, completion: RogoCore.RGBCompletionObject<Swift.Void?>?)
   func runScenario(scenario: RogoCore.RGBScenario, completion: RogoCore.RGBCompletionObject<Swift.Void?>?)
+}
+public struct RGBFptCameraDetail : Swift.Codable {
+  public let serial: Swift.String?, name: Swift.String?
+  public var deviceLabel: Swift.String?
+  public var group: RogoCore.RGBGroup?
+  public var product: RogoCore.RGBProduct? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 public protocol RGBiScheduleServices {
   func getAllSchedules(completion: RogoCore.RGBCompletionObject<[RogoCore.RGBSchedule]?>?)
