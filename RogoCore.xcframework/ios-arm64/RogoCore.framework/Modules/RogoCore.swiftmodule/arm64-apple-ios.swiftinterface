@@ -953,6 +953,7 @@ public enum RGBProductType : Swift.CaseIterable {
   case Zigbee_DoorSensor
   case Zigbee_MotionLightSensor
   case Zigbee_SmokeSensor
+  case BM_SmokeSensor
   case Camera
   public var protocolType: RogoCore.RGBProtocolType? {
     get
