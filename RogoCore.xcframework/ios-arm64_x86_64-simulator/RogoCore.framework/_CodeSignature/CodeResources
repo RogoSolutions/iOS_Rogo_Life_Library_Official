@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>FPT_Switch_x4_DevVer_V1.1.bin</key>
+		<data>
+		HnHeJ19upyErTnozSwB7Y9/WE4E=
+		</data>
 		<key>Headers/RogoCore-Swift.h</key>
 		<data>
 		b+T8SuykkdliznXOdTr5ax+Q9oM=
@@ -14,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		grg/Cqmo/OhTspPnWknHvM4+aes=
+		WGu/+/3jh7IQ9zVYx+zpKrERfek=
 		</data>
 		<key>Modules/RogoCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,11 +26,11 @@
 		</data>
 		<key>Modules/RogoCore.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BMFA8RZgKKfBtnRHOj8QmPURTw8=
+		zX0GtBTLtCCSpV9GVcdjAmvdPW8=
 		</data>
 		<key>Modules/RogoCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		tvQiOVf5H6+RzDoH1h58JZMIRms=
+		2axsGTdn2o4g/y8CLLkoYsqyCuk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,6 +39,13 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>FPT_Switch_x4_DevVer_V1.1.bin</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			IyqgwyZWcEJqfL+VXQMVMvYmDPR57uu+7nguwuvZSSs=
+			</data>
+		</dict>
 		<key>Headers/RogoCore-Swift.h</key>
 		<dict>
 			<key>hash2</key>
@@ -60,14 +71,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tr58RLxqgEYMP7I0ddVLGrUdInj62oBEvSrp22OMKko=
+			PcUr9cQQ7iQzbViPQ/DINwPWIv8DBPfWzKx+4Fv8/aY=
 			</data>
 		</dict>
 		<key>Modules/RogoCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p0EF+QFDvTNHnGChNzRSL1sNgCNyqhecRWcyafDO8HU=
+			oTpo8cZ7NpyE2r57Se4o6oi4quqjug9UX47xL+qRbiM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
