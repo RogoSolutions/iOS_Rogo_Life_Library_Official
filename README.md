@@ -1,6 +1,6 @@
 Release Note
 
-Version 1.0.7.8
+Version 1.0.7.9
 - Test hàm tạo mã đăng kí cho loa xử lý tình trạng không có callback trả về khi loa add thành công
     func generateDeviceActiveCode(locationId: String,
                                          verifyId: String?,
