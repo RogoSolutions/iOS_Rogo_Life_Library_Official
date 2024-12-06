@@ -1,6 +1,7 @@
 Release Note
 
-Version 1.0.8.5
-- Fix bug missing state in message state v1 + v2
-- Refactoring callback for api: linkingDeviceToSpotifyWith
+Version 1.0.8.6
+Update for spotify linking:
+- Cancelling the linking is not allowed once the device has been successfully linked.
+- Add a background task to wait for the linking result for up to 2 minutes.
 
