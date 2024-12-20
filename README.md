@@ -21,6 +21,8 @@ Version 1.0.8.9:
                                      isEnable: Bool,
                                      timeout: Int?,
                                      completion: RGBCompletionObject<RGBIrRemoteRawInfo?>?)
+    
+  + Hàm addIrFanRemote: bổ sung error code từ device trả về  
 
   + Đổi tên model RGBIrFanRemoteInfoMessage -> RGBIrRemoteRawInfo (sẽ dùng chứa mã raw dùng cho cả quạt lẫn điều hoà)
 
