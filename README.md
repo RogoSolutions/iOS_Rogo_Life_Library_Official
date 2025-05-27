@@ -1,6 +1,6 @@
 Release Note
 
-Version 1.0.9.14:
-Fix bug không nhận được log với thiết bị cửa cổng ble
+Version 1.0.9.15:
+Public hàm hỗ trợ ota ble
     
 
